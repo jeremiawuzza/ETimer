@@ -1,0 +1,10 @@
+# .gitignore file
+/bin
+/obj
+*.layout
+*.save
+*.depend
+*.bak.cpp
+test.*
+additions.*
+*.exe

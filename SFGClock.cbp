@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SFG Clock" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<MakeCommands>
+			<Build command="" />
+			<CompileFile command="" />
+			<Clean command="" />
+			<DistClean command="" />
+			<AskRebuildNeeded command="" />
+			<SilentBuild command=" &gt; $(CMD_NULL)" />
+		</MakeCommands>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SFG_Clock" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectIncludeDirsRelation="0" />
+				<Option projectLibDirsRelation="0" />
+				<Compiler>
+					<Add option="-pedantic" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="D:/Coding/CodeBlocksProjects/Resources" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/bin" />
+				</Compiler>
+				<Linker>
+					<Add directory="D:/SFML-2.3/lib" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="ElapsedTimer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectIncludeDirsRelation="0" />
+				<Option projectLibDirsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="D:/SFML-2.2/include" />
+					<Add directory="D:/SFML-2.2/include/SFML" />
+					<Add directory="D:/SFML-2.2/include/SFML/Graphics" />
+					<Add directory="D:/Coding/CodeBlocksProjects/Resources" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib/" />
+					<Add directory="D:/SFML-2.2/lib" />
+					<Add directory="D:/SFML-2.2/include/SFML/Audio" />
+					<Add directory="D:/SFML-2.2/bin" />
+				</Compiler>
+				<Linker>
+					<Add directory="D:/SFML-2.2/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="SFG_Clock_main.cpp" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="sfgClock.cpp" />
+		<Unit filename="sfgClock.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project project_number="This Project" />
+				<doxyfile_build extract_all="1" extract_private="1" extract_static="1" />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot class_diagrams="1" have_dot="1" />
+				<general use_at_in_tags="1" />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
