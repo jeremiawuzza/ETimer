@@ -60,6 +60,7 @@ public:
     sf::Vector2f sfmlSize;
     sf::Clock clock;  ///used to refresh screen
     sfg::SFGUI m_sfgui;
+    sfg::Entry::Ptr entry;
     sfg::Label::Ptr hourTextLabel;
     sfg::Label::Ptr minTextLabel;
     sfg::Label::Ptr secTextLabel;

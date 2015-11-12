@@ -56,7 +56,6 @@ void sfgClock::eTimer()
     secs = (runTime % 3600) % 60;
     updateTimeText(); }
 
-
 void sfgClock::setUp()
 {   /// multimedia setup
     sf::Image eplay; eplay.loadFromFile("play.png"); auto eplays = sfg::Image::Create(); eplays->SetImage(eplay);
@@ -65,7 +64,8 @@ void sfgClock::setUp()
     desktop.LoadThemeFromFile("Cezanne.theme");
     desktop.SetProperty( "*", "FontSize",23);
     desktop.SetProperty("*", "FontName", "Microgramma-D-OT-Medium-Extended.ttf");
-
+    desktop.SetProperty( "#E1", "FontSize",14);
+    desktop.SetProperty( "#E1", "BackgroundColor","#18181888");
 
     sfgWindow = sfg::Window::Create(sfg::Window::Style::BACKGROUND);
 
@@ -90,10 +90,14 @@ void sfgClock::setUp()
     stop->GetSignal( sfg::Widget::OnLeftClick ).Connect( std::bind( &sfgClock::pauseTimer, this));
     reset->GetSignal( sfg::Widget::OnLeftClick ).Connect( std::bind( &sfgClock::stopTimer, this));
 
+    entry = sfg::Entry::Create();
+    entry->SetId("E1");
+    entry->GetText();
     controls->Pack(start);
     controls->Pack(stop);
     controls->Pack(reset);
     auto mainBox = sfg::Box::Create(sfg::Box::Orientation::VERTICAL, padding);
+    mainBox->Pack(entry);
     mainBox->Pack(dTime);
     mainBox->Pack(sfg::Separator::Create(sfg::Separator::Orientation::HORIZONTAL), false);
     mainBox->Pack(controls);
